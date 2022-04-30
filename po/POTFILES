@@ -1,0 +1,7 @@
+data/xyz.gustavomachadoperedo.TextAnalyzer.desktop.in
+data/xyz.gustavomachadoperedo.TextAnalyzer.appdata.xml.in
+data/xyz.gustavomachadoperedo.TextAnalyzer.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+

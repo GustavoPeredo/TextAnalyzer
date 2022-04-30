@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.8.2 -->
+<interface>
+  <!-- interface-name window_.ui -->
+  <requires lib="gtk" version="4.0"/>
+  <template class="TextAnalyzer" parent="GtkApplicationWindow">
+    <child>
+      <object class="GtkBox">
+        <child>
+          <object class="GtkTextView" id="text_view">
+            <property name="hexpand">True</property>
+            <property name="margin-bottom">8</property>
+            <property name="margin-start">8</property>
+            <property name="margin-top">8</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="hexpand-set">True</property>
+            <property name="orientation">vertical</property>
+            <property name="width-request">240</property>
+            <child>
+              <object class="GtkHeaderBar">
+                <property name="width-request">0</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="homogeneous">True</property>
+                <property name="spacing">8</property>
+                <child>
+                  <object class="GtkImage" id="face_sad">
+                    <property name="icon-name">face-sad-symbolic</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="face_indifferent">
+                    <property name="icon-name">face-plain-symbolic</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkImage" id="face_happy">
+                    <property name="icon-name">face-smile-symbolic</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="halign">end</property>
+                <property name="margin-bottom">8</property>
+                <property name="margin-end">8</property>
+                <property name="margin-start">8</property>
+                <property name="margin-top">8</property>
+                <property name="spacing">8</property>
+                <child>
+                  <object class="GtkButton">
+                    <property name="icon-name">edit-undo-symbolic</property>
+                    <signal name="clicked" handler="hide_review_cb"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton">
+                    <property name="icon-name">edit-select-symbolic</property>
+                    <signal name="clicked" handler="show_review_cb"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkMenuButton">
+                    <property name="icon-name">open-menu-symbolic</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
